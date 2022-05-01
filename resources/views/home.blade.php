@@ -12,7 +12,7 @@
   <div class="current-series">
     @foreach ($arrComics as $comic)
         <div class="card">
-            <a href="{{ route('comic', ['id' => $comic['series']]) }}">
+            <a href="{{ route('comic', ['id' => $comic['id']]) }}">
                 {{-- <?php dd($comic) ?> --}}
                 <div class="img-holder">
                   <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">

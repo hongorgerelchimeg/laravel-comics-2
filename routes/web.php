@@ -23,7 +23,7 @@ Route::get('/comics', function () {
 
 Route::get('/comics/{id}', function ($id) {
   $comics = collect(config('comics'));
-  $selectedComic = $comics->firstWhere('series', $id);
+  $selectedComic = $comics->firstWhere('id', $id);
   if ($selectedComic === null ) abort(404);
 
   return view('template/comic_page', [
